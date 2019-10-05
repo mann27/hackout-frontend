@@ -2,7 +2,26 @@ import React, { Component } from "react";
 
 import { Navbar, Nav } from "react-bootstrap";
 
+import Web3 from "web3";
+
 export default class Navbar1 extends Component {
+  componentWillMount() {
+    this.loadBlockchainData();
+  }
+
+  async loadBlockchainData() {
+    const web3 = new Web3(
+      new Web3.providers.HttpProvider("http://localhost:8545")
+    );
+    const accounts = await web3.eth.accounts[0];
+    this.setState({ account: accounts });
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = { account: "" };
+  }
+
   render() {
     return (
       <div>
@@ -15,7 +34,7 @@ export default class Navbar1 extends Component {
               <Nav.Link href="/pricing">Pricing</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="/User">User</Nav.Link>
+              <Nav.Link>{this.state.account}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
