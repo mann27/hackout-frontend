@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../Navbar";
 
 import BookList from "./BookList";
+import { Button } from "react-bootstrap";
 
 class HomePage extends Component {
   render() {
@@ -10,8 +11,16 @@ class HomePage extends Component {
         <div className="nav-bar">
           <Navbar />
         </div>
+
         <div className="main-content container" style={{ paddingTop: "40px" }}>
-          <BookList />
+          <div className="addbook-container">
+            <Button href="/add" variant="dark">
+              Add New Book
+            </Button>
+          </div>
+          <div className="booklist-container" style={{ marginTop: "20px" }}>
+            <BookList />
+          </div>
         </div>
       </div>
     );
