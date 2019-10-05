@@ -10,7 +10,7 @@ class HomePage extends Component {
         <div className="nav-bar">
           <Navbar />
         </div>
-        <div className="main-content container">
+        <div className="main-content container" style={{ paddingTop: "40px" }}>
           <BookList />
         </div>
       </div>

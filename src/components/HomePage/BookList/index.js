@@ -3,22 +3,30 @@ import React, { Component } from "react";
 import BookListItem from "../BookListItem";
 import { Table } from "react-bootstrap";
 
-export default class BookList extends Component {
+import books from "../books.json";
+
+class BookList extends Component {
   render() {
+    console.log(books);
+
+    const Books = books.map(item => {
+      return <BookListItem key={item.id} item={item} />;
+    });
+
     return (
-      <Table striped bordered hover>
+      <Table striped bordered hover className="book-list-table">
         <thead>
           <tr>
             <th>#</th>
-            <th>Book Name</th>
+            <th>Book</th>
             <th>Author</th>
             <th>Price</th>
           </tr>
         </thead>
-        <tbody>
-          <BookListItem />
-        </tbody>
+        <tbody>{Books}</tbody>
       </Table>
     );
   }
 }
+
+export default BookList;

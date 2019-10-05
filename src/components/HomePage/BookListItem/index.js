@@ -4,10 +4,10 @@ export default class BookListItem extends Component {
   render() {
     return (
       <tr>
-        <td>1</td>
-        <td>Harry Potter</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>{this.props.item.id}</td>
+        <td>{this.props.item.name}</td>
+        <td>{this.props.item.author}</td>
+        <td>{this.props.item.price}</td>
       </tr>
     );
   }
