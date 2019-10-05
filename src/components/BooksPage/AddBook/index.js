@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-import Web3 from "web3";
-import { BStore_ABI, BStore_ADDRESS } from "../../../config";
+import axios from "axios";
 
 import { Form, Button } from "react-bootstrap";
 import Navbar from "../../Navbar";
@@ -16,18 +15,6 @@ export default class AddBook extends Component {
       bookpriceValue: 0,
       bookcoverValue: ""
     };
-  }
-
-  componentWillMount() {
-    this.loadBlockchainData();
-  }
-
-  async loadBlockchainData() {
-    const web3 = new Web3(
-      new Web3.providers.HttpProvider("http://localhost:8545")
-    );
-    const accounts = await web3.eth.getAccounts();
-    this.setState({ account: accounts[0] });
   }
 
   onChange = e => {
@@ -52,19 +39,10 @@ export default class AddBook extends Component {
     };
 
     console.log(book);
-    const web3 = new Web3(
-      new Web3.providers.HttpProvider("http://localhost:8545")
+
+    axios.get(
+      `http://localhost:5000/${book.bookpriceValue}/${book.booknameValue}/${book.bookcoverValue}`
     );
-    const bookList = new web3.eth.Contract(BStore_ABI, BStore_ADDRESS);
-    this.setState({ bookList });
-    bookList.methods
-      .createBook(
-        book.account,
-        book.bookpriceValue,
-        book.booknameValue,
-        book.bookcoverValue
-      )
-      .transact();
 
     //snail adding to db here
 

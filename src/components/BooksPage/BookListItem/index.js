@@ -5,7 +5,7 @@ export default class BookListItem extends Component {
   render() {
     return (
       <tr>
-        <td>{this.props.item.id}</td>
+        <td>{this.props.item.bookid}</td>
         <td>
           <div className="row">
             <div className="col-md-8">
@@ -15,7 +15,7 @@ export default class BookListItem extends Component {
             <div className="col-md-4">
               <Button
                 variant="outline-dark"
-                href={`/book/${this.props.item.id}`}
+                href={`/book/${this.props.item.bookid}`}
               >
                 View
               </Button>
@@ -23,6 +23,7 @@ export default class BookListItem extends Component {
           </div>
         </td>
         <td>{this.props.item.author}</td>
+        <td>{this.props.item.rating}</td>
         <td>{this.props.item.price}</td>
       </tr>
     );

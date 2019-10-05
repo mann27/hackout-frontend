@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import books from "../BooksPage/books.json";
 
 import Navbar from "../Navbar";
+import Review from "./Review";
 
 export default class BookDetails extends Component {
   constructor(props) {
@@ -33,6 +34,10 @@ export default class BookDetails extends Component {
   }
 
   render() {
+    const reviews = this.state.review_list.map(rev => {
+      return <Review data={rev} />;
+    });
+
     return (
       <div>
         <div className="nav-bar">
@@ -81,7 +86,9 @@ export default class BookDetails extends Component {
               </form>
             </div>
           </div>
-          <div className="list-reviews">{this.state.review_list}</div>
+          <div className="list-reviews">
+            <ul>{reviews}</ul>
+          </div>
         </div>
       </div>
     );
