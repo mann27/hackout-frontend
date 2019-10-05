@@ -9,7 +9,7 @@ export default class BookListItem extends Component {
         <td>
           <div className="row">
             <div className="col-md-8">
-              <p style={{ fontWeight: "bold" }}>{this.props.item.name}</p>
+              <p style={{ fontWeight: "bold" }}>{this.props.item.title}</p>
               <p>copies sold : 24</p>
             </div>
             <div className="col-md-4">

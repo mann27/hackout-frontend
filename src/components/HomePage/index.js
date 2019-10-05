@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Particles from "react-particles-js";
-import Bookcase from "../../templates/images/bookcase.jpg";
+//import Bookcase from "../../templates/images/bookcase.jpg";
 
 export default class HomePage extends Component {
   render() {
@@ -19,7 +19,10 @@ export default class HomePage extends Component {
       >
         <div className="home-title">
           <center style={{ marginTop: "20%" }}>
-            <h1>HeadOut Store</h1>
+            <h1>HeadOut Book Store</h1>
+            <h2>
+              <a href="/books">Go to Store</a>
+            </h2>
           </center>
         </div>
         <Particles

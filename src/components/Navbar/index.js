@@ -13,8 +13,8 @@ export default class Navbar1 extends Component {
     const web3 = new Web3(
       new Web3.providers.HttpProvider("http://localhost:8545")
     );
-    const accounts = await web3.eth.accounts[0];
-    this.setState({ account: accounts });
+    const accounts = await web3.eth.getAccounts();
+    this.setState({ account: accounts[0] });
   }
 
   constructor(props) {
