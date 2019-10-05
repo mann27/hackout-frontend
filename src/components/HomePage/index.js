@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar";
 
+import BookList from "./BookList";
+
 class HomePage extends Component {
   render() {
     return (
-      <div className="container">
-        <div>
+      <div>
+        <div className="nav-bar">
           <Navbar />
         </div>
-        <div className="content">Hello</div>
+        <div className="main-content container">
+          <BookList />
+        </div>
       </div>
     );
   }
