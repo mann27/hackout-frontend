@@ -1,15 +1,36 @@
 import React, { Component } from "react";
 
 import Particles from "react-particles-js";
+import Bookcase from "../../templates/images/bookcase.jpg";
 
 export default class HomePage extends Component {
   render() {
     return (
-      <div>
+      <section
+      // style={{
+      //   backgroundImage: `url(${Bookcase})`,
+      //   height: "100%",
+
+      //   /* Center and scale the image nicely */
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundSize: "cover"
+      // }}
+      >
+        <div className="home-title">
+          <center style={{ marginTop: "20%" }}>
+            <h1>HeadOut Store</h1>
+          </center>
+        </div>
         <Particles
           style={{
             width: "100%",
-            height: "100%"
+            height: "100%",
+            position: "fixed",
+            right: "0",
+            bottom: "0",
+            left: "0",
+            zIndex: "-1"
           }}
           params={{
             particles: {
@@ -122,7 +143,7 @@ export default class HomePage extends Component {
             retina_detect: true
           }}
         />
-      </div>
+      </section>
     );
   }
 }
