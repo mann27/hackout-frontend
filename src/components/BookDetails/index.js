@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import books from "../HomePage/books.json";
+import books from "../BooksPage/books.json";
 
 import Navbar from "../Navbar";
 
