@@ -19,7 +19,7 @@ export default class HomePage extends Component {
       >
         <div className="home-title">
           <center style={{ marginTop: "20%" }}>
-            <h1>HeadOut Book Store</h1>
+            <h1>HackOut Book Store</h1>
             <h2>
               <a href="/books">Go to Store</a>
             </h2>

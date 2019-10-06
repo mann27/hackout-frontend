@@ -10,7 +10,7 @@ export default class BookListItem extends Component {
           <div className="row">
             <div className="col-md-8">
               <p style={{ fontWeight: "bold" }}>{this.props.item.title}</p>
-              <p>copies sold : 24</p>
+              <p>copies sold : {this.props.item.nBuys}</p>
             </div>
             <div className="col-md-4">
               <Button

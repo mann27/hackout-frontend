@@ -34,7 +34,7 @@ export default class Navbar1 extends Component {
               <Nav.Link href="/books">Store</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link>{this.state.account}</Nav.Link>
+              <Nav.Link href="/user">{this.state.account}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

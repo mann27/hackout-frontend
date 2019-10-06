@@ -13,7 +13,8 @@ export default class AddBook extends Component {
       account: "",
       booknameValue: "",
       bookpriceValue: 0,
-      bookcoverValue: ""
+      bookcoverValue: "",
+      authoraddr: ""
     };
   }
 
@@ -29,19 +30,21 @@ export default class AddBook extends Component {
       account,
       booknameValue,
       bookpriceValue,
-      bookcoverValue
+      bookcoverValue,
+      authoraddr
     } = this.state;
     const book = {
       account,
       booknameValue,
       bookpriceValue,
-      bookcoverValue
+      bookcoverValue,
+      authoraddr
     };
 
     console.log(book);
 
     axios.get(
-      `http://localhost:5000/${book.bookpriceValue}/${book.booknameValue}/${book.bookcoverValue}`
+      `http://localhost:5000/createbook/${book.authoraddr}/${book.bookpriceValue}/${book.booknameValue}/${book.bookcoverValue}`
     );
 
     //snail adding to db here
@@ -50,7 +53,8 @@ export default class AddBook extends Component {
       bookpublisherValue: "",
       booknameValue: "",
       bookpriceValue: 0,
-      bookcoverValue: ""
+      bookcoverValue: "",
+      authoraddr: ""
     });
   };
 
@@ -93,6 +97,16 @@ export default class AddBook extends Component {
                   name="bookcoverValue"
                   placeholder="add a url link of book cover"
                   value={this.state.bookcoverValue}
+                  onChange={this.onChange}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Author Address</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="authoraddr"
+                  placeholder="add the address of the author"
+                  value={this.state.authoraddr}
                   onChange={this.onChange}
                 />
               </Form.Group>
