@@ -6,6 +6,7 @@ export default class UserBookItem extends Component {
       <tr>
         <td>{this.props.item.bookid}</td>
         <td>{this.props.item.title}</td>
+        <td>{this.props.item.author}</td>
         <td>{this.props.item.rating}</td>
         <td>{this.props.item.price}</td>
       </tr>
