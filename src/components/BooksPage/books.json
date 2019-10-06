@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Harry Potter",
+    "author": "J.K Rowling",
+    "price": 15
+  },
+  {
+    "id": 2,
+    "name": "Angels and Demons",
+    "author": "Dan Brown",
+    "price": 19
+  },
+  {
+    "id": 3,
+    "name": "2 states",
+    "author": "Chetan Bhagat",
+    "price": 10
+  },
+  {
+    "id": 4,
+    "name": "Percy Jackson",
+    "author": "Rick Riordan",
+    "price": 28
+  }
+]
