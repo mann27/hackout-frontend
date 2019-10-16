@@ -9,7 +9,7 @@ import AddBook from "../components/BooksPage/AddBook";
 import HomePage from "../components/HomePage";
 import UserBookList from "../components/UserBookList";
 
-const IndexRoutes = () => {
+const IndexRoutes = (props) => {
   return (
     <Switch>
       <Route path="/home" component={HomePage} />
